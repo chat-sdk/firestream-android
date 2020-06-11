@@ -120,17 +120,17 @@ The library will automatically integrate with Firebase's login / logout cycle.
 
 > **Which is better Firestore or Realtime?**  
 >Firestore and Firebase each has it's own set of strenghts and weaknesses. But here is a short summary.
-
+>
 >Firestore is better for:
-
+>
 >- Apps with more than 10 million monthly users
-- Apps where realtime latency isn't critical
-- Apps were a lot of users send few messages
-
+>- Apps where realtime latency isn't critical
+>- Apps were a lot of users send few messages
+>
 >Firebase is better for:
-
+>
 >- Apps where realtime latency is critical
-- Apps where a few users send a lot of messages
+>- Apps where a few users send a lot of messages
 
 ## Hello world!
 
