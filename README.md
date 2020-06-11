@@ -118,7 +118,7 @@ Fire.stream().initialize(this, new RealtimeService());
 
 The library will automatically integrate with Firebase's login / logout cycle. 
 
-> **Which is better Firestore or Realtime?**  
+#### Which is better Firestore or Realtime?
 >Firestore and Firebase each has it's own set of strenghts and weaknesses. But here is a short summary.
 >
 >Firestore is better for:
