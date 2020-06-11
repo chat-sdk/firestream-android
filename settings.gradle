@@ -1,0 +1,8 @@
+include 'app',
+        'firestream',
+        'firestream-realtime',
+        'firestream-firestore',
+        'sdk-guru-common',
+        'sdk-guru-realtime',
+        'sdk-guru-firestore'
+include ':demo'
