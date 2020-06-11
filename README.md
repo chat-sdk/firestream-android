@@ -93,7 +93,13 @@ android {
 dependencies {
     ...
     implementation "sdk.chat:firestream:[version]"
+
+    // And
+
     implementation "sdk.chat:firestream-realtime:[version]"
+    
+    // Or
+    
     implementation "sdk.chat:firestream-firestore:[version]"
 }
 ```
