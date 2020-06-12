@@ -82,6 +82,7 @@ public class ChatActivity extends Activity {
             reload();
         });
 
+        reload();
 
     }
 

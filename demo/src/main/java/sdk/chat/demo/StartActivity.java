@@ -171,6 +171,7 @@ public class StartActivity extends Activity {
                     MessageMemoryStore.instance.addMessage(messageEvent.get().getFrom(), messageEvent.get());
                     addUser(messageEvent.get().getFrom());
                 }
+                reloadList();
             }
         }));
 
