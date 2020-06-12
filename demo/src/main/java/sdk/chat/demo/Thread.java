@@ -43,7 +43,7 @@ public class Thread implements IDialog<Message> {
     public Message getLastMessage() {
         List<Sendable> sendables = MessageMemoryStore.instance.sendablesForUser(id);
         if (sendables != null && sendables.size() > 0) {
-            sendables.get(sendables.size() - 1);
+            return new Message(sendables.get(sendables.size() - 1));
         }
         return null;
     }
