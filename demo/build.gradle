@@ -1,5 +1,6 @@
 apply plugin: 'com.android.application'
 apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.jakewharton.butterknife'
 
 android {
 
@@ -32,6 +33,17 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation "com.firebaseui:firebase-ui-auth:$firebaseUiVersion"
+    implementation 'com.github.stfalcon:chatkit:0.3.3'
+
+    implementation "com.jakewharton:butterknife:$butterKnifeVersion"
+    annotationProcessor "com.jakewharton:butterknife-compiler:$butterKnifeVersion"
+    implementation 'androidmads.library.qrgenearator:QRGenearator:1.0.4'
+    api "androidx.constraintlayout:constraintlayout:$androidxConstraintLayoutVersion"
+    implementation 'com.github.blikoon:QRCodeScanner:0.1.2'
+    implementation "androidx.recyclerview:recyclerview:$androidxRecyclerViewVersion"
+    implementation "com.karumi:dexter:$dexterVersion"
 
     implementation "sdk.chat:firestream:5.0.0rc7"
     implementation "sdk.chat:firestream-realtime:5.0.0rc7"

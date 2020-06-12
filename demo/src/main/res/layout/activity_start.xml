@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_margin="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/scanButton"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.5"
+                    android:layout_height="50dp"
+                    android:layout_margin="10dp"
+                    android:text="Scan QR Code"/>
+
+                <Button
+                    android:id="@+id/showButton"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.5"
+                    android:layout_height="50dp"
+                    android:layout_margin="10dp"
+                    android:text="Display QR Code"/>
+
+
+            </LinearLayout>
+
+
+            <com.stfalcon.chatkit.dialogs.DialogsList
+                android:id="@+id/dialogsList"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:elevation="10dp"
+        />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" />
+
+</FrameLayout>

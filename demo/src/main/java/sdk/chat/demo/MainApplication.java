@@ -6,6 +6,7 @@ import org.pmw.tinylog.Logger;
 
 import java.io.Console;
 
+import firestream.chat.FirestreamConfig;
 import firestream.chat.chat.Chat;
 import firestream.chat.chat.User;
 import firestream.chat.firestore.FirestoreService;
@@ -32,7 +33,7 @@ public class MainApplication extends Application {
     public void onCreate() {
         super.onCreate();
 
-        Fire.stream().initialize(this, new FirestoreService());
+        Fire.stream().initialize(this, new FirestreamConfig(this).setRoot("firestream").setSandbox("demo"), new RealtimeService());
 
 //        Fire.stream().sendMessageWithText("userId", "Hello World!");
 //

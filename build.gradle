@@ -21,7 +21,7 @@ ext {
     bintrayVersion = "1.8.4"
     mavenGradleVersion = "2.1"
     androidxAppcompatVersion = "1.1.0"
-    androidxConstraintLayoutVersion = "2.0.0-beta6"
+    androidxConstraintLayoutVersion = "2.0.0-beta5"
     androidxLifecycleExtensionsVersion = "2.2.0"
     androidxRecyclerViewVersion = "1.1.0"
     androidxMultidexVersion = "2.0.1"
@@ -29,7 +29,7 @@ ext {
     playAuthVersion = "17.0.0"
     playMapsVersion = "17.0.0"
     playLocationVersion = "17.0.0"
-    firebaseUiVersion = "4.3.2"
+    firebaseUiVersion = "6.2.0"
     firebaseCoreVersion = "17.4.1"
     firebaseDatabaseVersion = "19.3.0"
     firebaseFirestoreVersion = "21.4.3"
@@ -75,7 +75,7 @@ ext {
     exoplayerVersion = "2.11.3"
     androidAudioConverterVersion = "0.0.8"
 
-    // Used by file messagesf
+    // Used by file messages
     androidNetworkingVersion = "1.0.2"
     pdfiumVersion = "1.9.0"
 
