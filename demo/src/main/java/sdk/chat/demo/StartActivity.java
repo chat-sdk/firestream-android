@@ -33,14 +33,9 @@ import androidmads.library.qrgenearator.QRGEncoder;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import firestream.chat.chat.User;
-import firestream.chat.firebase.service.Keys;
-import firestream.chat.message.Message;
-import firestream.chat.message.Sendable;
 import firestream.chat.namespace.Fire;
 import firestream.chat.types.ContactType;
-import io.reactivex.functions.Consumer;
 import sdk.guru.common.DisposableMap;
-import sdk.guru.common.Event;
 import sdk.guru.common.RX;
 
 public class StartActivity extends Activity {
@@ -192,7 +187,9 @@ public class StartActivity extends Activity {
         }
     }
 
+    @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
 
         if(resultCode != Activity.RESULT_OK)
         {

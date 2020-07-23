@@ -35,18 +35,16 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    api "androidx.appcompat:appcompat:$androidxAppcompatVersion"
-    api "io.reactivex.rxjava2:rxandroid:$rxAndroidVersion"
-    api "io.reactivex.rxjava2:rxjava:$rxJavaVersion"
-    api "com.jakewharton.rxrelay2:rxrelay:$rxRelayVersion"
-    api "org.tinylog:tinylog:$tinyLogVersion"
-
+    implementation project(':sdk-guru-common')
+    implementation project(':chat-sdk-core')
+    implementation("com.squareup.okhttp3:okhttp:4.7.2")
+    implementation "com.google.code.gson:gson:$gsonVersion"
 }
 
 ext {
-    libraryName = 'GuruCommon'
-    artifact = 'guru-common'
-    libraryDescription = 'Guru Common'
+    libraryName = 'GuruLicensing'
+    artifact = 'guru-licensing'
+    libraryDescription = 'Guru Licensing'
 }
 
 publish {

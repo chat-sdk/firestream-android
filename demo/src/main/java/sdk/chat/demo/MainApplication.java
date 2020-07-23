@@ -2,24 +2,10 @@ package sdk.chat.demo;
 
 import android.app.Application;
 
-import org.pmw.tinylog.Logger;
-
-import java.io.Console;
-
 import firestream.chat.FirestreamConfig;
-import firestream.chat.chat.Chat;
-import firestream.chat.chat.User;
 import firestream.chat.firestore.FirestoreService;
-import firestream.chat.interfaces.IChat;
-import firestream.chat.message.Message;
 import firestream.chat.namespace.Fire;
-import firestream.chat.realtime.RealtimeService;
-import firestream.chat.types.RoleType;
-import io.reactivex.disposables.Disposable;
-import io.reactivex.functions.BiConsumer;
-import io.reactivex.functions.Consumer;
 import sdk.guru.common.DisposableMap;
-import sdk.guru.common.Event;
 
 /**
  * Created by Ben Smiley on 6/8/2014.
@@ -33,7 +19,8 @@ public class MainApplication extends Application {
     public void onCreate() {
         super.onCreate();
 
-        Fire.stream().initialize(this, new FirestreamConfig(this).setRoot("firestream").setSandbox("demo"), new RealtimeService());
+        Fire.stream().initialize(this, new FirestreamConfig(this).setRoot("firestream").setSandbox("demo"), new FirestoreService());
+
 
 //        Fire.stream().sendMessageWithText("userId", "Hello World!");
 //
@@ -80,6 +67,7 @@ public class MainApplication extends Application {
 //                }));
 //            }
 //        }));
+
 
     }
 

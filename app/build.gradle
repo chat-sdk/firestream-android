@@ -83,6 +83,12 @@ android {
 
 dependencies {
     implementation project(':firestream')
+    implementation project(':firestream-realtime')
+    implementation project(':firestream-firestore')
+
+    api "com.google.android.material:material:$materialVersion"
+    implementation "com.firebaseui:firebase-ui-auth:$firebaseUiVersion"
+
 }
 
 
