@@ -150,7 +150,7 @@ public class StartActivity extends Activity {
         dialogsList.setAdapter(dialogsListAdapter);
 
         // Firestream
-        dm.add(Fire.stream().getContactEvents().observeOn(RX.main()).subscribe(userEvent -> {
+        dm.add(Fire.stream().getContactEvents().pastAndNewEvents().observeOn(RX.main()).subscribe(userEvent -> {
             if(userEvent.isAdded()) {
                 users.add(userEvent.get().getId());
             }
@@ -160,7 +160,7 @@ public class StartActivity extends Activity {
             reloadList();
         }));
 
-        dm.add(Fire.stream().getSendableEvents().getMessages().observeOn(RX.main()).subscribe(messageEvent -> {
+        dm.add(Fire.stream().getSendableEvents().getMessages().pastAndNewEvents().observeOn(RX.main()).subscribe(messageEvent -> {
             if (messageEvent.isAdded()) {
                 if (!messageEvent.get().getId().equals(Fire.stream().currentUserId())) {
                     MessageMemoryStore.instance.addMessage(messageEvent.get().getFrom(), messageEvent.get());

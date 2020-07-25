@@ -45,8 +45,13 @@ dependencies {
     implementation "androidx.recyclerview:recyclerview:$androidxRecyclerViewVersion"
     implementation "com.karumi:dexter:$dexterVersion"
 
-    implementation "sdk.chat:firestream:5.0.0rc7"
-    implementation "sdk.chat:firestream-realtime:5.0.0rc7"
-    implementation "sdk.chat:firestream-firestore:5.0.0rc7"
+    implementation project(':firestream')
+    implementation project(':firestream-realtime')
+    implementation project(':firestream-firestore')
+
+
+//    implementation "sdk.chat:firestream:5.0.4"
+//    implementation "sdk.chat:firestream-realtime:5.0.4"
+//    implementation "sdk.chat:firestream-firestore:5.0.4"
 
 }
